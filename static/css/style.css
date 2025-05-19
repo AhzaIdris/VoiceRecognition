@@ -1,0 +1,29 @@
+/* Custom styles to enhance layout and accessibility */
+
+body {
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 */
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#recognizedText {
+  min-height: 2rem;
+  padding: 0.5rem;
+  background-color: #f1f5f9; /* Tailwind slate-100 */
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1; /* Tailwind slate-300 */
+  margin-top: 1rem;
+  font-style: italic;
+}

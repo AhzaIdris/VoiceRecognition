@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col items-center justify-center min-h-screen">
+  <div class="text-center space-y-4">
+    <h1 class="text-3xl font-bold">Voice Recognition and Synthesis App</h1>
+    
+    <div class="space-x-2">
+      <button onclick="startRecognition()" class="px-4 py-2 bg-blue-500 text-white rounded-xl shadow-md hover:bg-blue-600">Start Recognition</button>
+      <button onclick="stopRecognition()" class="px-4 py-2 bg-red-500 text-white rounded-xl shadow-md hover:bg-red-600">Stop</button>
+    </div>
+
+    <p id="recognizedText" class="mt-4 text-lg text-gray-700"></p>
+
+    <textarea id="speakText" rows="4" class="mt-6 p-2 border rounded w-full max-w-md" placeholder="Type text to speak..."></textarea>
+    <br/>
+    <button onclick="speak()" class="mt-2 px-4 py-2 bg-green-500 text-white rounded-xl shadow-md hover:bg-green-600">Speak</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
